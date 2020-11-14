@@ -1,0 +1,32 @@
+.row-container{
+    display: flex;
+    justify-content: center;
+}
+.col-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.interactive-map{
+    width: 75%;
+    height: 75%;
+}
+.stacked-chart{
+    width: 50%;
+    height: 50%;
+}
+.static-map{
+    width: 25%;
+    height: 25%
+}
+.align-center{
+    align-self: center;
+}
+.grid{
+    flex-grow: 1;
+    max-width: 500px
+}
+.big-grid{
+    flex-grow: 1;
+    max-width: 1000px
+}

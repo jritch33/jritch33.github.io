@@ -1,1 +1,162 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Jordon's site</title>
+    <script type="text/javascript" src="https://d3js.org/d3.v6.min.js"></script>
+    <link rel="stylesheet" href="master.css">
+
+</head>
+
+<body>
+
+    <div class="col-container">
+        <h1 class="align-center">Family health history (FHx) and hereditary cancer risk</h1>
+    </div>
+    <div class="col-container">
+        <div class="row-container">
+            <div class="col-container grid">
+                <div class="static-map1"></div>
+                <div class="align-center">We collected family health histories (FHx) for 4,914 probands
+                    (a person serving as the starting point for the genetic study of a family).
+                </div>
+                <div class="align-center">
+                    <p>Credit: <a
+                            href="https://observablehq.com/@jritch33/all-probands-who-meets-cpg-cancer-criteria-by-u-s-county">All
+                            Probands by Jordon Ritchie</a></p>
+                </div>
+            </div>
+            <div class="col-container grid">
+                <div class="static-map2"></div>
+                <div class="align-center">2,223 of the FHx's we collected met hereditary cancer criteria from either The
+                    American Medical College of Genetics and Genoimmcs (ACMG) or The National Comprehensive Cancer
+                    Network (NCCN) or both.
+                </div>
+                <div class="align-center">
+                    <p>Credit: <a
+                            href="https://observablehq.com/@jritch33/at-risk-probands-who-meets-cpg-cancer-criteria-by-u-s-county">Probands
+                            At Risk by Jordon Ritchie</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="row-container">
+            <div class="col-container grid">
+                <div class="static-map3"></div>
+                <div class="align-center">2,691 of the FHx's we collected DID NOT met hereditary cancer criteria from
+                    either The
+                    American Medical College of Genetics and Genoimmcs (ACMG) or The National Comprehensive Cancer
+                    Network (NCCN).
+                </div>
+                <div class='align-center'>
+                    <p>Credit: <a
+                            href="https://observablehq.com/@jritch33/not-at-risk-probands-who-meet-cpg-cancer-criteria-by-u-s-count">Probands
+                            Not At Risk by Jordon Ritchie</a></p>
+                </div>
+            </div>
+            <div class="col-container grid">
+                <div class="static-map4"></div>
+                <div class="align-center"> 621 probands reported personal or family genetic testing and 156 of the FHx's
+                    we collected reported a positive personal or family genetic mutation.
+                </div>
+                <div class="align-center">
+                    <p>Credit: <a
+                            href="https://observablehq.com/@jritch33/probands-with-a-reported-gene-mutation-by-u-s-county">Probands
+                            with a reported gene mutation by Jordon Ritchie</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-container">
+        <div class="row-container">
+            <div class="stacked-chart"></div>
+            <div class="key"></div>
+
+        </div>
+        <div class="align-center big-grid">Of the 2,691 probands who did not meet criteria, the majority (90.6%) had at
+            least one cancer in their FHx and just under three quarters (71.7%) had 1-3 cancers in their FHx.
+        </div>
+        <div class="align-center">
+            <p>Credit: <a href="https://observablehq.com/@jritch33/stacked-bar-chart">Stacked Bar Chart by Jordon
+                    Ritchie</a>
+            </p>
+        </div>
+    </div>
+
+    <div class="col-container">
+        <div class="viewof-variable align-center"></div>
+        <div class="row-container">
+            <div class="interactive-map"></div>
+        </div>
+        <div class="align-center big-grid">FHx's for the 4,914 probands can be filtered by 'All', 'At Risk', 'Not at
+            Risk', 'ACMG', 'NCCN', 'Breast and Ovarian', Colorectal/Endometrial', 'Li-Fraumeni Syndrome', and 'Has Gene
+            Mutation'. The vast majority of at risk probands have not been tested for 
+        </div>
+        <div class="align-center">
+            <p>Credit: <a href="https://observablehq.com/@jritch33/meets-cpg-cancer-criteria-by-u-s-county">Meets CPG
+                    cancer
+                    criteria by U.S. county by Jordon Ritchie</a></p>
+        </div>
+    </div>
+
+    <!-- static-map1 -->
+    <script type="module">
+        import { Runtime, Inspector } from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+        import define from "https://api.observablehq.com/@jritch33/all-probands-who-meets-cpg-cancer-criteria-by-u-s-county.js?v=3";
+        (new Runtime).module(define, name => {
+            if (name === "chart") return Inspector.into(".static-map1")();
+        });
+    </script>
+
+    <!-- static-map2 -->
+    <script type="module">
+        import { Runtime, Inspector } from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+        import define from "https://api.observablehq.com/@jritch33/at-risk-probands-who-meets-cpg-cancer-criteria-by-u-s-county.js?v=3";
+        (new Runtime).module(define, name => {
+            if (name === "chart") return Inspector.into(".static-map2")();
+        });
+    </script>
+
+    <!-- static-map3 -->
+    <script type="module">
+        import { Runtime, Inspector } from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+        import define from "https://api.observablehq.com/@jritch33/not-at-risk-probands-who-meet-cpg-cancer-criteria-by-u-s-count.js?v=3";
+        (new Runtime).module(define, name => {
+            if (name === "chart") return Inspector.into(".static-map3")();
+        });
+    </script>
+
+    <!-- static-map4 -->
+    <script type="module">
+        import { Runtime, Inspector } from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+        import define from "https://api.observablehq.com/@jritch33/probands-with-a-reported-gene-mutation-by-u-s-county.js?v=3";
+        (new Runtime).module(define, name => {
+            if (name === "chart") return Inspector.into(".static-map4")();
+        });
+    </script>
+
+    <!--stacked-chart-->
+    <script type="module">
+        import { Runtime, Inspector } from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+        import define from "https://api.observablehq.com/@jritch33/stacked-bar-chart.js?v=3";
+        (new Runtime).module(define, name => {
+            if (name === "key") return Inspector.into(".key")();
+            if (name === "chart") return Inspector.into(".stacked-chart")();
+        });
+    </script>
+
+    <!-- interactive-map -->
+    <script type="module">
+        import { Runtime, Inspector } from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+        import define from "https://api.observablehq.com/@jritch33/meets-cpg-cancer-criteria-by-u-s-county.js?v=3";
+        (new Runtime).module(define, name => {
+            if (name === "viewof variable") return Inspector.into(".viewof-variable")();
+            if (name === "chart") return Inspector.into(".interactive-map")();
+            return ["data"].includes(name) || null;
+        });
+    </script>
+
+</body>
+
+</html>
