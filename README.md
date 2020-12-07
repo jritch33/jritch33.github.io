@@ -4,6 +4,6 @@ Group Members: Jordon Ritchie
 
 Website: [jritch33.github.io](https://jritch33.github.io/)
 
-Link to original data: Pending
+Link to original data: [dataset for vis1](https://docs.google.com/spreadsheets/d/1vPQ_J-9kn1B6pFEWc-OKJTksjIlAU-G7If3bUSskM64/edit?usp=sharing) and [dataset for vis2](https://docs.google.com/spreadsheets/d/1bp5SDM8EBVZwEtcItdwTv4Gg9dM6jMLsV83TijMS-Wk/edit?usp=sharing)
 
 Breakdown: I did everything :)
